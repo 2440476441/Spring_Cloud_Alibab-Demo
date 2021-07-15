@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @GetMapping("/get-user")
     public String getUser(){
-        return "我站在梦的光点";
+        return "微服务8081";
     }
 }
