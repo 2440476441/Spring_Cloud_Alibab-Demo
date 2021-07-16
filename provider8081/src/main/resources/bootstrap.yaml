@@ -1,0 +1,11 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: provider8081
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.100.42.118:8848
+        namespace: spring-cloud-alibaba
+        group: TEST_GROUP
