@@ -10,6 +10,7 @@
     <modules>
         <module>provider8081</module>
         <module>provider8082</module>
+        <module>provider80</module>
     </modules>
     <packaging>pom</packaging>
 
