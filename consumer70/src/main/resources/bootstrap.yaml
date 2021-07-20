@@ -1,9 +1,11 @@
 server:
-  port: 8082
+  port: 70
 spring:
   application:
-    name: provider
+    name: consumer70
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
+#        namespace: spring-cloud-alibaba
+#        group: TEST_GROUP

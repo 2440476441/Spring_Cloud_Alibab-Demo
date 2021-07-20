@@ -7,9 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="provider8081" />
-        <module name="consumer80" />
+        <module name="consumer70" />
+        <module name="gateway" />
         <module name="provider8082" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="gateway80" target="1.5" />
+      <module name="gatewayTest" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gateway" options="-parameters" />
+    </option>
   </component>
 </project>

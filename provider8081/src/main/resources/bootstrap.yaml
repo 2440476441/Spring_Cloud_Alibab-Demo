@@ -6,6 +6,6 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 47.100.42.118:8848
-        namespace: spring-cloud-alibaba
-        group: TEST_GROUP
+        server-addr: localhost:8848
+#        namespace: spring-cloud-alibaba
+#        group: TEST_GROUP

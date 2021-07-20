@@ -10,7 +10,9 @@
     <modules>
         <module>provider8081</module>
         <module>provider8082</module>
-        <module>provider80</module>
+        <module>consumer70</module>
+        <module>gateway</module>
+<!--        <module>gateway</module>-->
     </modules>
     <packaging>pom</packaging>
 

@@ -16,4 +16,8 @@ public class UserController {
     public String getUser(){
         return userService.getUser();
     }
+    @RequestMapping("/404.do")
+    public String Ret404(){
+        return "555566565";
+    }
 }
