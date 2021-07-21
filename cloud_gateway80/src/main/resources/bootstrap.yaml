@@ -1,0 +1,26 @@
+server:
+  port: 80
+uri:
+  demo: lb://consumer70
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启网关自动映射
+          lowerCaseServiceId: true # 开启服务名称小写转换
+      routes:
+        - id: api # id唯一
+          uri: ${uri.demo} # 本地负载均衡策略
+          predicates: # 配置谓词集合
+            - Path=/api01/wdw/**
+          filters: # 配置过滤器集合
+            - StripPrefix=2
+        - id: api02 # id唯一
+          uri: ${uri.demo} # 本地负载均衡策略
+          predicates: # 配置谓词集合
+            - Path=/api02/wdw/**
+          filters: # 配置过滤器集合
+            - StripPrefix=2
