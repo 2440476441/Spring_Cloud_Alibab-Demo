@@ -12,15 +12,42 @@ spring:
           enabled: true # 开启网关自动映射
           lowerCaseServiceId: true # 开启服务名称小写转换
       routes:
-        - id: api # id唯一
-          uri: ${uri.demo} # 本地负载均衡策略
-          predicates: # 配置谓词集合
-            - Path=/api01/wdw/**
-          filters: # 配置过滤器集合
-            - StripPrefix=2
-        - id: api02 # id唯一
-          uri: ${uri.demo} # 本地负载均衡策略
-          predicates: # 配置谓词集合
-            - Path=/api02/wdw/**
-          filters: # 配置过滤器集合
-            - StripPrefix=2
+        - id: 165
+          uri: lb://consumer70/
+          predicates:
+            - Path=/api/**
+          filters:
+            - StripPrefix=1
+#        - id: 165
+#          uri: http://www.163.com
+#          predicates:
+#            - RemoteAddr=192.168.0.252 # 匹配远程请求地址是RemoteAddr的请求
+#        - id: 165
+#          uri: http://www.163.com
+#          predicates:
+#              # 匹配中国上海时间 2021-07-22 11:20:20之后的请求
+#            - After=2021-07-22T11:20:20.000+08:00[Asia/Shanghai]
+#        - id: api            # id唯一
+#          uri: ${uri.demo}    # 本地负载均衡策略
+#          predicates:         # 配置谓词集合
+#            - Path=/api01/wdw/**
+#          filters:            # 配置过滤器集合
+#            - StripPrefix=2
+#        - id: api02
+#          uri: ${uri.demo}
+#          predicates:
+#            - Path=/api02/wdw/**
+#          filters:
+#            - StripPrefix=2
+#        - id: 163
+#          uri: http://163.com
+#          predicates:
+#            - Path=/163/**
+#        - id: 164
+#          uri: http://www.163.com
+#          predicates:
+#            - Query=token,abc.  # 包含参数token，且满足正则表达式"abc."
+#        - id: 165
+#          uri: http://www.163.com
+#          predicates:
+#            - Method=GET        # 只匹配get请求

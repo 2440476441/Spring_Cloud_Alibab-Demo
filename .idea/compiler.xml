@@ -9,11 +9,12 @@
         <module name="provider8081" />
         <module name="cloud_gateway80" />
         <module name="consumer70" />
-        <module name="gateway" />
         <module name="provider8082" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="gateway" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
