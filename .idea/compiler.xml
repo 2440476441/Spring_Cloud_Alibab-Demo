@@ -9,6 +9,7 @@
         <module name="provider8081" />
         <module name="cloud_gateway80" />
         <module name="consumer70" />
+        <module name="cloud_sentinel60" />
         <module name="provider8082" />
       </profile>
     </annotationProcessing>

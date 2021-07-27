@@ -1,0 +1,15 @@
+server:
+  port: 60
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080 # 控制台的地址
+      datasource:
+        ds:
+          nacos:
+            server-addr: localhost:8848  # nacos连接地址
+#            group-id: DEFAULT_GROUP  # nacos连接的分组
+            rule-type: flow  # 流控规则  rule-type 配置表示该数据源中的规则属于哪种类型的规则(flow，degrade，authority，system, param-flow, gw-flow, gw-api-group)
+            data-id: sentinel_config  # 读取配置文件的 data-id
+            data-type: json #  读取培训文件类型为json

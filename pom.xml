@@ -11,8 +11,8 @@
         <module>provider8081</module>
         <module>provider8082</module>
         <module>consumer70</module>
-        <module>gateway</module>
         <module>cloud_gateway80</module>
+        <module>cloud_sentinel60</module>
     </modules>
     <packaging>pom</packaging>
 
