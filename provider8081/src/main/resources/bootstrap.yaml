@@ -1,10 +1,22 @@
 server:
   port: 8081
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.100.42.118:3306/rm01?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 'Root123456'
   application:
     name: provider
   cloud:
     nacos:
+#      config:
+#        server-addr: localhost:8848 # IP地址
+#        file-extension: yaml # 配置文件类型
+#        ext-config:
+#          - data-id: test01.yaml # dataId
+##            group: STORE_GROUP # 组
+##            refresh: true # 是否动态刷新
       discovery:
         server-addr: localhost:8848
 #        namespace: spring-cloud-alibaba
