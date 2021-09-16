@@ -7,8 +7,29 @@ spring:
     username: root
     password: 'Root123456'
   application:
-    name: provider
+    name: provider02
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
+        namespace: fcf48d9c-1b25-413a-b365-2fa20ad3568d
+seata:
+  application-id: seata-server
+  tx-service-group: my_test_tx_group
+  config:
+    type: nacos
+    nacos:
+      namespace: fcf48d9c-1b25-413a-b365-2fa20ad3568d
+      server-addr: localhost:8848
+      group: STATE_GROUP
+      username: "nacos"
+      password: "nacos"
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: localhost:8848
+      # group:
+      namespace: fcf48d9c-1b25-413a-b365-2fa20ad3568d
+      username: "nacos"
+      password: "nacos"
